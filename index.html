@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify - Web Player: Music for everyone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <nav id="pc-nav">
+    <div class="nav-left"><img src="assets/logo.svg"></div>
+    <div class="nav-center">
+      <div class="nav-center-left">
+        <div id="home-btn"><img width="28px" src="assets/home.svg"></div>
+      </div>
+      <div class="nav-center-right"><input id="search" placeholder="What do you want to play?" type="text"></div>
+    </div>
+    <div class="nav-right">
+      <div class="nav-right-left">
+        <ul>
+          <li>Premium</li>
+          <li>Support</li>
+          <li>Download</li>
+        </ul>
+      </div>
+      <div style="padding: 0px 20px; font-size: 32px;">|</div>
+      <div class="nav-right-right">
+        <ul>
+          <li id="install"><img style="width: 14px;" src="assets/install.svg">Install App</li>
+          <li>Sign up</li>
+          <li><span id="login">Log in</span></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav id="mobile-nav">
+    <img id="ham-menu" src="assets/hamburger.svg" alt="hamburger-menu">
+    <img src="assets/logo.svg" alt="spotify-logo">
+  </nav>
+  <div class="body">
+    <div class="left">
+      <div class="left-header">
+        <b style="padding-left: 8px;">Your Library</b>
+        <div id="plus"><img src="assets/plus.svg"></div>
+      </div>
+      <div class="left-content"></div>
+    </div>
+    <div class="right">
+      <h1>Spotify Playlists</h1>
+      <div class="spotify-playlists"></div>
+      <div class="song-controls">
+        <div style="display: flex; width: 100%; justify-content: space-between; align-self: flex-start;">
+          <h2 id="current-song-title"></h2>
+          <div style="display: flex; gap: 8px;">
+            <img src="assets/volume-med.svg" id="vol-icon" width="30px" alt="">
+            <input type="range" id="volume">
+          </div>
+        </div>
+        <h3 id="current-song-artist"></h3>
+        <div class="control-btns">
+          <div style="display: flex; gap: 10px;">
+            <img id="prev" src="assets/prev.svg" alt="prev">
+            <img id="play" src="assets/control_play.svg" alt="play">
+            <img id="next" src="assets/next.svg" alt="next">
+          </div>
+          <div>
+            <span id="currentTime">00:00</span>
+            <span>/</span>
+            <span id="duration">00:00</span>
+          </div>
+        </div>
+        <input id="songPlayedDuration" type="range" value="0">
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- xmlns="http://www.w3.org/2000/svg" -->
