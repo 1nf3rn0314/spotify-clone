@@ -19,7 +19,7 @@ function prettyPrintTime(seconds) {
 }
 
 async function getAlbums() {
-  let albums_raw = await fetch("/spotify-clone/songs/");
+  let albums_raw = await fetch("/songs/");
   let tmp = document.createElement("div");
   tmp.innerHTML = await albums_raw.text();
   let eles = Array.from(tmp.getElementsByTagName("a"));
@@ -33,7 +33,7 @@ async function getAlbums() {
 
 async function getSongs(folder) {
   currFolder = folder + "/";
-  let song_req = await fetch("/spotify-clone/songs/" + folder);
+  let song_req = await fetch("/songs/" + folder);
   let response = await song_req.text();
   let tmpDiv = document.createElement("div");
   tmpDiv.innerHTML = response;
