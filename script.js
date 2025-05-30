@@ -26,7 +26,8 @@ async function getAlbums() {
   eles.shift();
   let albums = [];
   eles.forEach(album => {
-    albums.push(album.innerText.slice(0, album.innerText.length-1));
+    albums.push(album.innerText);
+    // albums.push(album.innerText.slice(0, album.innerText.length-1));
   });
   return albums;
 }
